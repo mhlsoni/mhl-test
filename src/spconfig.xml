@@ -1,0 +1,26 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+ 
+<beans>
+	
+	<bean id="id2" class="java4s.WelcomeBean"> 
+		<property name="message" value="Test string" />
+		<property name="listData">
+			<list>
+				<value>aa</value>
+				<value>bb</value>
+				<value>cc</value>
+				<value>aa</value>
+			</list>			
+		</property>
+		<property name="car">
+			<ref local="id1" />
+		</property> 
+	</bean>
+	
+	<bean id="id1" class="java4s.Car">
+		<property name="fuelType" value="Diesel" />
+		<property name="maxSpeed" value="100" /> 
+	</bean>
+ 
+</beans>
